@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Riffic+Free:wght@400;700&display=swap'); /* Import Riffic Font */
+
+/* Body font styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Apply Roboto to all paragraph text */
+p {
+  @apply font-roboto;
+}
+
+/* Apply Poppins to all header text */
+h2, h3, h4, h5, h6 {
+  @apply font-poppins;
+}
+
+/* Apply Nerko One font to h1*/
+h1 {
+  font-family: 'Nerko One', sans-serif; /* Applying Nerko One */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
