@@ -34,7 +34,7 @@ const AboutPage = () => {
         </div>
         </div>
         
-        {/* Philosophy Section */}
+        {/* Philosophy Section (si gud shit)*/}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           <div className="flex items-center justify-center">
             <img src={`${process.env.PUBLIC_URL}/Photos/20240529_143444.jpg`} alt="Philosophy" className="rounded-lg shadow-lg w-full h-auto" />
