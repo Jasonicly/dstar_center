@@ -9,16 +9,16 @@ function HeroSection() {
 
   const texts = [
     {
-      title: "Welcome to Dstar Daycare",
-      subtitle: "Enrollment for 2025/26 now available",
+      subtitle: "2025 Student Care Registration",
+      title: "Get 50% off your fees for the first 6 months",
     },
     {
-      title: "Join Our Friendly Community",
-      subtitle: "Creating a nurturing environment for your child",
+      title: "Welcome to DStar after school care",
+      subtitle: "Register Online Today",
     },
     {
-      title: "Enroll Your Child Today",
-      subtitle: "Building a foundation for a brighter future",
+      title: "Tuition classes & Enrichment available",
+      subtitle: "Open to all primary school students",
     },
   ];
 
@@ -29,7 +29,7 @@ function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       handleImageChange((currentImage + 1) % images.length);
-    }, 10000);
+    }, 15000);
     return () => clearInterval(interval);
   }, [currentImage]);
 
@@ -43,7 +43,7 @@ function HeroSection() {
 
   return (
     <section
-      className="bg-cover bg-center h-screen flex items-center justify-start text-white relative overflow-hidden"
+      className="bg-cover bg-center h-screen flex items-center justify-center text-white relative overflow-hidden"
       style={{
         backgroundImage: `url(${images[currentImage]})`,
         backgroundPosition: 'center 40%',
@@ -51,19 +51,24 @@ function HeroSection() {
         animation: 'fluid-wave 15s infinite',
       }}
     >
-      <div className="relative text-left">
-        {/* Animated Blob Text Container */}
-        {/* Blob Text Container */}
+      {/* Blob Container */}
+      <div className="relative flex items-center justify-center w-full h-full">
         <div
           className={`transform transition-all duration-500 ${
             isTransitioning ? "opacity-0 -translate-x-full" : "opacity-100 translate-x-0"
-          } p-20 shadow-lg max-w-xl mx-auto bg-custom-blue`} // Increased padding and max width
+          } p-20 shadow-lg bg-custom-blue text-center max-w-2xl`} // Increased padding and max width
           style={{
             clipPath: "url(#blob)", // Blob shape using SVG clipPath
-            marginLeft: '2rem',
           }}
         >
-          <h2 className="text-4xl font-bold">{texts[currentImage].title}</h2> {/* Increased font size for the title */}
+          <h1 
+            className="text-5xl font-bold text-orange-500 px-10" 
+            style={{ textShadow: '2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000',
+              whiteSpace: 'pre-line' // This will handle the line break
+             }}
+          >
+            {texts[currentImage].title}
+          </h1>
           <p className="mt-4 text-lg">{texts[currentImage].subtitle}</p>
           <a
             href="registration"
@@ -72,7 +77,6 @@ function HeroSection() {
             Join Us Today
           </a>
         </div>
-
       </div>
 
       {/* Navigation Dots */}
@@ -93,13 +97,11 @@ function HeroSection() {
         <defs>
           <clipPath id="blob" clipPathUnits="objectBoundingBox">
             <path
-              d="M0.2,0.1 C0.45,-0.1,0.75,0.2,0.85,0.35 C0.95,0.5,0.85,0.85,0.6,0.95 C0.35,1,0.15,0.85,0.05,0.6 C-0.05,0.35,0.1,0.15,0.2,0.1"
+              d="M0.2,0.2 C0.35,0.05,0.65,0.05,0.8,0.2 C0.95,0.35,0.95,0.65,0.8,0.8 C0.65,0.95,0.35,0.95,0.2,0.8 C0.05,0.65,0.05,0.35,0.2,0.2"
             />
           </clipPath>
         </defs>
       </svg>
-
-
 
       {/* Background Fluid Animation */}
       <style>

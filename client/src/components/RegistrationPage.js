@@ -49,7 +49,7 @@ const RegistrationPage = () => {
         <div className="mb-8 text-center">
           <h1 className="text-5xl font-bold text-custom-blue">Register Your Child</h1>
           <p className="mt-4 text-gray-700 text-lg">
-            Join our exciting community today. Complete the form below to secure your child’s spot!
+            Join our exciting family today. Complete the form below to secure your child’s spot!
           </p>
         </div>
 
@@ -148,17 +148,12 @@ const RegistrationPage = () => {
               required
             >
               <option value="">Select Option</option>
-              <option value="Kindergarten">Kindergarten</option>
               <option value="Primary 1">Primary 1</option>
               <option value="Primary 2">Primary 2</option>
               <option value="Primary 3">Primary 3</option>
               <option value="Primary 4">Primary 4</option>
               <option value="Primary 5">Primary 5</option>
               <option value="Primary 6">Primary 6</option>
-              <option value="Secondary 1">Secondary 1</option>
-              <option value="Secondary 2">Secondary 2</option>
-              <option value="Secondary 3">Secondary 3</option>
-              <option value="Secondary 4">Secondary 4</option>
             </select>
           </div>
 
@@ -185,7 +180,7 @@ const RegistrationPage = () => {
           <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
             <div className="bg-white shadow-lg p-8 rounded-lg w-96">
               <h3 className="text-2xl font-bold text-custom-blue">Form Submitted</h3>
-              <p className="mt-4 text-lg text-gray-700">A representative will contact you in 1-2 business days.</p>
+              <p className="mt-4 text-lg text-gray-700">A representative will contact you soon.</p>
               <button onClick={closePopup} className="mt-6 bg-custom-blue text-white py-2 px-4 rounded hover:bg-blue-700 transition">Close</button>
             </div>
           </div>

@@ -92,15 +92,20 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4 text-black">Our Location</h3>
           <p className="text-black mb-4">
-            Blk 729 Jurong West Avenue 5, #B1-214, Singapore 640729
+            Blk 729 Jurong West Avenue 5, #B1-214,<br />Singapore 640729
           </p>
 
           {/* Opening Hours */}
           <h3 className="text-lg font-semibold mb-4 text-black">Opening Hours</h3>
           <p className="text-black">
-            Monday to Friday: 7.00am – 7.00pm
+            Monday to Friday: 1.00pm – 7.00pm,
             <br />
-            Saturday, Sunday: Closed
+            (School days)
+            <br />
+            Monday to Friday: 7.00am – 7.00pm,
+            <br />
+            (Non-school days)
+
           </p>
 
           {/* Social Media Icons */}

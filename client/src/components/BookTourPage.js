@@ -7,11 +7,10 @@ const BookTourPage = () => {
     parentContact: '',
     parentEmail: '',
     preferredDate: '',
-    preferredTime: '09:00 AM',
+    preferredTime: '02:00 PM', // Default to PM
   });
 
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [dateError, setDateError] = useState(false);
   const [pastDateError, setPastDateError] = useState(false);
 
   const handleInputChange = (e) => {
@@ -21,16 +20,9 @@ const BookTourPage = () => {
     if (name === 'preferredDate') {
       const selectedDate = new Date(value);
       const today = new Date();
-      const day = selectedDate.getUTCDay();
 
       // Reset errors
-      setDateError(false);
       setPastDateError(false);
-
-      // If the selected day is Saturday (6) or Sunday (0), show error message
-      if (day === 6 || day === 0) {
-        setDateError(true);
-      }
 
       // If the selected date is in the past, show error message
       if (selectedDate.setHours(0, 0, 0, 0) < today.setHours(0, 0, 0, 0)) {
@@ -42,9 +34,20 @@ const BookTourPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!dateError && !pastDateError) {
+    if (!pastDateError) {
+      // Check if the time includes AM or PM, if not, add PM by default
+      const formattedTime = formData.preferredTime.includes('AM') || formData.preferredTime.includes('PM')
+        ? formData.preferredTime
+        : `${formData.preferredTime} PM`;
+
+      // Prepare final form data
+      const finalFormData = {
+        ...formData,
+        preferredTime: formattedTime,
+      };
+
       // Send the form data via EmailJS
-      emailjs.send('service_ecs8fst', 'template_hxsy408', formData, 'YevRGch7wUcJRkugR')
+      emailjs.send('service_ecs8fst', 'template_hxsy408', finalFormData, 'YevRGch7wUcJRkugR')
         .then((result) => {
           console.log('Email sent successfully:', result.text);
           setFormSubmitted(true); // Show the success message
@@ -126,11 +129,6 @@ const BookTourPage = () => {
               className="w-full p-2 rounded border border-gray-300 text-black"
               required
             />
-            {dateError && (
-              <p className="text-red-500 text-sm mt-2">
-                Please select a weekday. We're closed on weekends.
-              </p>
-            )}
             {pastDateError && (
               <p className="text-red-500 text-sm mt-2">
                 Please select a future date. Past dates are not allowed.
@@ -138,20 +136,18 @@ const BookTourPage = () => {
             )}
           </div>
 
-          <div className="mb-4">
+          <div className="mb-4 col-span-2">
             <label className="block text-lg mb-2" htmlFor="preferredTime">Preferred Time</label>
-            <select
+            <input
+              type="text"
               name="preferredTime"
               id="preferredTime"
               value={formData.preferredTime}
               onChange={handleInputChange}
               className="w-full p-2 rounded border border-gray-300 text-black"
+              placeholder="Enter preferred time (e.g. 02:00 PM)"
               required
-            >
-              <option value="02:00 PM">02:00 PM</option>
-              <option value="04:00 PM">04:00 PM</option>
-              <option value="06:00 PM">06:00 PM</option>
-            </select>
+            />
           </div>
 
           <button type="submit" className="col-span-2 mt-6 bg-custom-blue text-white py-2 px-4 rounded hover:bg-blue-700 transition">
@@ -175,7 +171,7 @@ const BookTourPage = () => {
           <div className="relative w-96 h-auto p-8 bg-custom-beige rounded-md shadow-2xl transform rotate-2 hover:rotate-1 transition-all duration-500 text-center">
             <h1 className="text-3xl font-bold text-custom-misty-red">What Is This?</h1>
             <p className="mt-4 text-gray-700 text-base">
-              Booking a tour with us allows you to come to our center and view our facilities firsthand. You can explore our classrooms, meet our teachers, and ask any questions you may have about our programs.
+              Booking a tour with us allows you to come to our centre and view our facilities firsthand. You can explore our classrooms, meet our teachers, and ask any questions you may have about our programs.
             </p>
             <p className="mt-4 text-gray-700 text-base">
               Just choose a convenient time and we’ll be happy to show you around!

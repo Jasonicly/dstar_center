@@ -28,7 +28,7 @@ const NewsPage = () => {
           Latest News
         </h1>
         <p className="text-lg text-gray-700 mb-8 text-center">
-          Stay up to date with the latest updates from DStar EduCentre. Follow us on Instagram to see our latest events, activities, and announcements.
+          Stay up to date with the latest updates from DStar EduCentre. <br />Follow us on Instagram to see our latest events, activities, and announcements.
         </p>
 
         {/* Instagram Widget */}

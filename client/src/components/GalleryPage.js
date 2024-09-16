@@ -73,13 +73,10 @@ function GalleryPage() {
               GALLERY
             </h1>
           </div>
-          <p className="text-gray-500 -mt-12">
-            Explore our collection of beautiful images captured during various events and moments.
-          </p>
         </header>
 
         {/* Gallery Grid */}
-        <div className="px-4">
+        <div className="px-4 -mt-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {imageEntries.slice(0, visibleImages).map(([imageName, imageSrc], index) => (
               <div

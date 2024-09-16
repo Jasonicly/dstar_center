@@ -6,13 +6,14 @@ const CenterLocation = () => {
     <div className="min-h-screen-md max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
         {/* Text Section */}
         <div className="w-full md:w-1/3 mb-8 md:mb-0 text-right">
-          <h2 className="text-4xl font-bold">Our Center Location</h2>
+          <h2 className="text-4xl font-bold">Our Centre Location</h2>
           <p className="mt-4 text-lg text-gray-700">
-            Conveniently located in the heart of the neighbourhood, our center is easily accessible to families.
+            Conveniently located in the neighbourhood, <br />our centre is easily accessible to families.
           </p>
           <p className="mt-4 text-lg text-gray-700">
-            <strong>Address:</strong> Blk 729 Jurong West Avenue 5, #B1-214, Singapore 640729
+            <strong>Address:</strong> Blk 729 Jurong West Avenue 5,<br />#B1-214, Singapore 640729
           </p>
+          {/* {*blk 730 jurong west st 71 #b1-*/}
         </div>
 
         {/* Map Section */}

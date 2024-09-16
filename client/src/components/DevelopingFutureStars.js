@@ -30,25 +30,25 @@ function DevelopingFutureStars() {
   const overlayData = [
     {
       title: "After School Care Service",
-      subtitle: "DStar is committed to providing the highest level of after school care to your child. We aim to be a one-stop educational center that fulfills the learning needs of your child.",
+      subtitle: "Explore our one-stop educational center, designed to meet all of your child's learning needs.",
       image: `${process.env.PUBLIC_URL}/Photos/IMG-20240701-WA0040.jpg`,
       description: "Our after school care service ensures your child is in a safe and nurturing environment after school. We provide homework supervision, nutritious meals, and a range of engaging activities to help them grow academically and socially. Our service includes both indoor and outdoor activities designed to meet the needs of growing children. From academic enrichment programs to creative play, we foster a well-rounded environment for kids after their school day ends. Additionally, our caregivers offer personalized attention to every child, ensuring a fun and educational experience."
     },
     {
       title: "Tuition Service",
-      subtitle: "  DStar provides tuition from Primary 1 onwards. Speak with our consultant today. Our tuition teachers are highly qualified (some ex-school teachers).",
+      subtitle: "  We offer tuition starting from Primary 1 and continuing through all grade levels.",
       image: `${process.env.PUBLIC_URL}/Photos/IMG-20240719-WA0042.jpg`,
       description: "Our tuition service offers individualized attention for your child from Primary 1 onwards. Our experienced tutors, many of whom have worked in schools, provide personalized academic support in subjects ranging from mathematics to science and languages. We use a structured approach to ensure that your child receives the best guidance. Each session is customized based on your child's learning style, helping them grasp complex concepts with ease. Along with regular assessments and feedback, we ensure steady progress towards academic success."
     },
     {
       title: "Enrichment Program",
-      subtitle: " DStar offers event-based classes like creative writing, robotics tryouts, and other exciting activities to enrich your child's learning experience.",
+      subtitle: "Discover our event-based classes in creative writing, robotics, and coding to see how we bring exciting learning experiences to life. ",
       image: `${process.env.PUBLIC_URL}/Photos/IMG-20240521-WA0021.jpg`,
       description: "Our enrichment programs inspire creativity and curiosity in children. From robotics workshops to creative writing and art, we offer a wide range of activities to help children develop new skills and passions. These programs are carefully designed to complement academic learning, encouraging children to think critically, solve problems creatively, and work collaboratively with their peers. Through hands-on experiences, children can explore their interests and unlock their full potential."
     },
     {
       title: "School Holiday Program",
-      subtitle: "DStar offers full-day care programs during school holidays to keep your child engaged and learning while having fun!",
+      subtitle: "We provide full-day care services during school holidays, keeping your child engaged, learning, and having fun throughout the day. ",
       image: `${process.env.PUBLIC_URL}/Photos/20240529_143444.jpg`,
       description: "Our full-day school holiday program is packed with fun and educational activities to keep your child engaged during school breaks. We offer a blend of field trips, games, sports, and hands-on projects that balance education and recreation. Whether it's exploring the outdoors, building new friendships, or developing life skills, your child will have a memorable and productive holiday experience with us. We also include meals and transportation services as part of the program, ensuring your child's comfort and safety."
     }
@@ -112,7 +112,8 @@ function DevelopingFutureStars() {
               <div className={`absolute top-2 w-[28rem] h-full mr-5 bg-black opacity-10 transform ${index % 2 === 0 ? "rotate-2" : "-rotate-2"} rounded-md ml-12`}></div>
               <div className={`relative w-[28rem] h-auto p-12 bg-custom-beige rounded-md shadow-2xl transform ${index % 2 === 0 ? "rotate-3" : "-rotate-3"} hover:rotate-1 transition-all duration-500 ml-12 text-center`}>
                 <h1 className="text-5xl font-bold text-custom-misty-red">{note.title}</h1>
-                <p className="mt-4 text-xl text-gray-700">Learn more about {note.subtitle}.</p>
+                <p className="mt-4 text-xl text-gray-700">{note.subtitle}.</p>
+                <p className="mt-4 text-sm text-gray-700 italic">Click here to learn more</p>
               </div>
             </div>
           ))}
