@@ -53,7 +53,7 @@ const JoinTeamPage = () => {
         {/* Removed job tabs */}
         <div className="bg-custom-beige p-6 rounded-b-lg shadow-lg text-lg">
           <p className="mb-4">
-            We are always looking for talented individuals for various roles such as teachers, assistant teachers, admin officers, bus drivers, and more. Feel free to apply for the position that suits you the best!
+            We are always looking for talented individuals for various roles such as teachers, assistant teachers, cleaners, cooks, and more. Feel free to apply for the position that suits you the best!
           </p>
           <p className="text-gray-700 mb-6 text-center">
             Potential roles include:
@@ -63,13 +63,17 @@ const JoinTeamPage = () => {
             <li><strong>Cooks/Cleaners</strong>: Assist with meal preparations and maintaining a clean environment.</li>
             <li><strong>Part-Timers</strong>: Flexible roles for those seeking part-time opportunities.</li>
           </ul>
+          <p className="text-gray-700 mb-6 text-center font-bold">
+            Apply now and we will contact you on how you could contribute to our team!
+          </p>
         </div>
 
         {/* Application Form */}
         <div className="mt-12">
-          <h3 className="text-2xl font-bold text-custom-blue mb-4 text-center">Apply for a Role</h3>
-          <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="mb-4">
+        <h3 className="text-2xl font-bold text-custom-blue mb-4 text-center">Apply for a Role</h3>
+        <form onSubmit={handleSubmit} className="space-y-6 mb-5">
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="w-full md:w-1/2">
               <label className="block text-lg mb-2" htmlFor="name">Full Name</label>
               <input
                 type="text"
@@ -82,7 +86,7 @@ const JoinTeamPage = () => {
               />
             </div>
 
-            <div className="mb-4">
+            <div className="w-full md:w-1/2">
               <label className="block text-lg mb-2" htmlFor="phone">Phone Number</label>
               <input
                 type="tel"
@@ -94,8 +98,10 @@ const JoinTeamPage = () => {
                 required
               />
             </div>
+          </div>
 
-            <div className="mb-4">
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="w-full md:w-1/2">
               <label className="block text-lg mb-2" htmlFor="email">Email Address</label>
               <input
                 type="email"
@@ -108,7 +114,7 @@ const JoinTeamPage = () => {
               />
             </div>
 
-            <div className="mb-4">
+            <div className="w-full md:w-1/2">
               <label className="block text-lg mb-2" htmlFor="jobApplied">Job Applying For</label>
               <input
                 type="text"
@@ -121,15 +127,18 @@ const JoinTeamPage = () => {
                 required
               />
             </div>
+          </div>
 
-            <button
-              type="submit"
-              className="col-span-2 mt-6 bg-custom-blue text-white py-2 px-4 rounded hover:bg-blue-700 transition"
-            >
-              Submit Application
-            </button>
-          </form>
-        </div>
+          <button
+            type="submit"
+            className="w-full mt-10 bg-custom-blue text-white py-2 px-4 rounded hover:bg-blue-700 transition"
+          >
+            Submit Application
+          </button>
+        </form>
+      </div>
+
+
 
         {/* Success Popup */}
         {formSubmitted && (

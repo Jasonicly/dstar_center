@@ -78,65 +78,69 @@ const BookTourPage = () => {
         </div>
 
         {/* Form Section */}
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="mb-4">
-            <label className="block text-lg mb-2" htmlFor="parentName">Name</label>
-            <input
-              type="text"
-              name="parentName"
-              id="parentName"
-              value={formData.parentName}
-              onChange={handleInputChange}
-              className="w-full p-2 rounded border border-gray-300 text-black"
-              required
-            />
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="w-full md:w-1/2">
+              <label className="block text-lg mb-2" htmlFor="parentName">Name</label>
+              <input
+                type="text"
+                name="parentName"
+                id="parentName"
+                value={formData.parentName}
+                onChange={handleInputChange}
+                className="w-full p-2 rounded border border-gray-300 text-black"
+                required
+              />
+            </div>
+
+            <div className="w-full md:w-1/2">
+              <label className="block text-lg mb-2" htmlFor="parentContact">Contact Number</label>
+              <input
+                type="tel"
+                name="parentContact"
+                id="parentContact"
+                value={formData.parentContact}
+                onChange={handleInputChange}
+                className="w-full p-2 rounded border border-gray-300 text-black"
+                required
+              />
+            </div>
           </div>
 
-          <div className="mb-4">
-            <label className="block text-lg mb-2" htmlFor="parentContact">Contact Number</label>
-            <input
-              type="tel"
-              name="parentContact"
-              id="parentContact"
-              value={formData.parentContact}
-              onChange={handleInputChange}
-              className="w-full p-2 rounded border border-gray-300 text-black"
-              required
-            />
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="w-full md:w-1/2">
+              <label className="block text-lg mb-2" htmlFor="parentEmail">Email</label>
+              <input
+                type="email"
+                name="parentEmail"
+                id="parentEmail"
+                value={formData.parentEmail}
+                onChange={handleInputChange}
+                className="w-full p-2 rounded border border-gray-300 text-black"
+                required
+              />
+            </div>
+
+            <div className="w-full md:w-1/2">
+              <label className="block text-lg mb-2" htmlFor="preferredDate">Preferred Date</label>
+              <input
+                type="date"
+                name="preferredDate"
+                id="preferredDate"
+                value={formData.preferredDate}
+                onChange={handleInputChange}
+                className="w-full p-2 rounded border border-gray-300 text-black"
+                required
+              />
+              {pastDateError && (
+                <p className="text-red-500 text-sm mt-2">
+                  Please select a future date. Past dates are not allowed.
+                </p>
+              )}
+            </div>
           </div>
 
-          <div className="mb-4">
-            <label className="block text-lg mb-2" htmlFor="parentEmail">Email</label>
-            <input
-              type="email"
-              name="parentEmail"
-              id="parentEmail"
-              value={formData.parentEmail}
-              onChange={handleInputChange}
-              className="w-full p-2 rounded border border-gray-300 text-black"
-              required
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-lg mb-2" htmlFor="preferredDate">Preferred Date</label>
-            <input
-              type="date"
-              name="preferredDate"
-              id="preferredDate"
-              value={formData.preferredDate}
-              onChange={handleInputChange}
-              className="w-full p-2 rounded border border-gray-300 text-black"
-              required
-            />
-            {pastDateError && (
-              <p className="text-red-500 text-sm mt-2">
-                Please select a future date. Past dates are not allowed.
-              </p>
-            )}
-          </div>
-
-          <div className="mb-4 col-span-2">
+          <div className="w-full">
             <label className="block text-lg mb-2" htmlFor="preferredTime">Preferred Time</label>
             <input
               type="text"
@@ -150,7 +154,7 @@ const BookTourPage = () => {
             />
           </div>
 
-          <button type="submit" className="col-span-2 mt-6 bg-custom-blue text-white py-2 px-4 rounded hover:bg-blue-700 transition">
+          <button type="submit" className="w-full mt-6 bg-custom-blue text-white py-2 px-4 rounded hover:bg-blue-700 transition">
             Submit Booking
           </button>
         </form>

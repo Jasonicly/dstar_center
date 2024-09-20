@@ -97,7 +97,9 @@ function DevelopingFutureStars() {
         <div className="relative w-full md:w-1/2 ml-8">
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-10 transform -rotate-1 z-0"></div>
           <div className="relative bg-custom-beige p-6 shadow-lg transform rotate-2 z-10">
-            <h1 className="text-5xl font-bold text-black mb-4 text-custom-blue">Developing Future Stars</h1>
+            <h1 className="text-5xl font-bold text-black mb-4 text-custom-blue break-words">
+              Developing Future Stars
+            </h1>
             <p className="text-2xl text-gray-700 mb-4">Upon entering pre-school, usually children will bring with them a variety of personal and social skills, values, and attitudes. No matter how little these are, it is important that they foster these values and from the relationships and experiences within the home and immediate environment, we will help them to cultivate their learning environment.</p>
             <p className="text-2xl text-gray-700 text-center font-bold"> We provide classes for:</p>
           </div>
@@ -106,19 +108,34 @@ function DevelopingFutureStars() {
 
       {/* Sticky Notes Section */}
       <div className="relative pb-16 bg-custom-cloud">
-        <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          {overlayData.map((note, index) => (
-            <div key={index} className="relative w-full flex justify-center cursor-pointer" onClick={() => openOverlay(index)}>
-              <div className={`absolute top-2 w-[28rem] h-full mr-5 bg-black opacity-10 transform ${index % 2 === 0 ? "rotate-2" : "-rotate-2"} rounded-md ml-12`}></div>
-              <div className={`relative w-[28rem] h-auto p-12 bg-custom-beige rounded-md shadow-2xl transform ${index % 2 === 0 ? "rotate-3" : "-rotate-3"} hover:rotate-1 transition-all duration-500 ml-12 text-center`}>
-                <h1 className="text-5xl font-bold text-custom-misty-red">{note.title}</h1>
-                <p className="mt-4 text-xl text-gray-700">{note.subtitle}.</p>
-                <p className="mt-4 text-sm text-gray-700 italic">Click here to learn more</p>
-              </div>
-            </div>
-          ))}
+  <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+    {overlayData.map((note, index) => (
+      <div key={index} className="relative w-full flex justify-center cursor-pointer" onClick={() => openOverlay(index)}>
+        
+        {/* Dynamic shadow, set to be relative to the sticky note */}
+        <div
+          className={`absolute top-2 w-10/12 h-full bg-black opacity-10 transform ${
+            index % 2 === 0 ? 'rotate-2' : '-rotate-2'
+          } rounded-md`}
+          style={{ marginRight: '5%', marginLeft: '5%' }} // Adjust the margin as needed for a dynamic effect
+        ></div>
+        
+        {/* Sticky note */}
+        <div
+          className={`relative w-full md:w-10/12 h-auto p-12 bg-custom-beige rounded-md shadow-2xl transform ${
+            index % 2 === 0 ? 'rotate-3' : '-rotate-3'
+          } hover:rotate-1 transition-all duration-500 text-center flex flex-col`}
+        >
+          <h1 className="text-5xl font-bold text-custom-misty-red break-words">{note.title}</h1>
+          <p className="mt-4 text-xl text-gray-700">{note.subtitle}.</p>
+          <div className="flex-grow"></div> {/* This div will take up the remaining space */}
+          <p className="mt-4 text-sm text-gray-700 italic">Click here to learn more</p>
         </div>
       </div>
+    ))}
+  </div>
+</div>
+
 
       {/* Overlay */}
       {overlayContent && (

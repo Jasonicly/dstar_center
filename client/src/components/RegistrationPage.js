@@ -54,111 +54,118 @@ const RegistrationPage = () => {
         </div>
 
         {/* Form should remain visible even after submission */}
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
           
           {/* Parent's Information */}
-          <div className="mb-4">
-            <label className="block text-lg mb-2" htmlFor="parentName">Your Name</label>
-            <input
-              type="text"
-              name="parentName"
-              id="parentName"
-              value={formData.parentName}
-              onChange={handleInputChange}
-              className="w-full p-2 rounded border border-gray-300 text-black"
-              required
-            />
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="w-full md:w-1/2">
+              <label className="block text-lg mb-2" htmlFor="parentName">Your Name</label>
+              <input
+                type="text"
+                name="parentName"
+                id="parentName"
+                value={formData.parentName}
+                onChange={handleInputChange}
+                className="w-full p-2 rounded border border-gray-300 text-black"
+                required
+              />
+            </div>
+
+            <div className="w-full md:w-1/2">
+              <label className="block text-lg mb-2" htmlFor="parentContact">Your Contact Number</label>
+              <input
+                type="tel"
+                name="parentContact"
+                id="parentContact"
+                value={formData.parentContact}
+                onChange={handleInputChange}
+                className="w-full p-2 rounded border border-gray-300 text-black"
+                required
+              />
+            </div>
           </div>
 
-          <div className="mb-4">
-            <label className="block text-lg mb-2" htmlFor="parentContact">Your Contact Number</label>
-            <input
-              type="tel"
-              name="parentContact"
-              id="parentContact"
-              value={formData.parentContact}
-              onChange={handleInputChange}
-              className="w-full p-2 rounded border border-gray-300 text-black"
-              required
-            />
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="w-full md:w-1/2">
+              <label className="block text-lg mb-2" htmlFor="parentEmail">Your Email</label>
+              <input
+                type="email"
+                name="parentEmail"
+                id="parentEmail"
+                value={formData.parentEmail}
+                onChange={handleInputChange}
+                className="w-full p-2 rounded border border-gray-300 text-black"
+                required
+              />
+            </div>
+
+            <div className="w-full md:w-1/2">
+              <label className="block text-lg mb-2" htmlFor="childName">Child's Name</label>
+              <input
+                type="text"
+                name="childName"
+                id="childName"
+                value={formData.childName}
+                onChange={handleInputChange}
+                className="w-full p-2 rounded border border-gray-300 text-black"
+                required
+              />
+            </div>
           </div>
 
-          <div className="mb-4">
-            <label className="block text-lg mb-2" htmlFor="parentEmail">Your Email</label>
-            <input
-              type="email"
-              name="parentEmail"
-              id="parentEmail"
-              value={formData.parentEmail}
-              onChange={handleInputChange}
-              className="w-full p-2 rounded border border-gray-300 text-black"
-              required
-            />
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="w-full md:w-1/2">
+              <label className="block text-lg mb-2" htmlFor="childAge">Child's Age</label>
+              <input
+                type="number"
+                name="childAge"
+                id="childAge"
+                value={formData.childAge}
+                onChange={handleInputChange}
+                className="w-full p-2 rounded border border-gray-300 text-black"
+                required
+                min="0" // Ensure no negative age
+              />
+            </div>
+
+            <div className="w-full md:w-1/2">
+              <label className="block text-lg mb-2" htmlFor="childSchool">Child's School</label>
+              <input
+                type="text"
+                name="childSchool"
+                id="childSchool"
+                value={formData.childSchool}
+                onChange={handleInputChange}
+                className="w-full p-2 rounded border border-gray-300 text-black"
+                required
+              />
+            </div>
           </div>
 
-          {/* Child's Information */}
-          <div className="mb-4">
-            <label className="block text-lg mb-2" htmlFor="childName">Child's Name</label>
-            <input
-              type="text"
-              name="childName"
-              id="childName"
-              value={formData.childName}
-              onChange={handleInputChange}
-              className="w-full p-2 rounded border border-gray-300 text-black"
-              required
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-lg mb-2" htmlFor="childAge">Child's Age</label>
-            <input
-              type="number"
-              name="childAge"
-              id="childAge"
-              value={formData.childAge}
-              onChange={handleInputChange}
-              className="w-full p-2 rounded border border-gray-300 text-black"
-              required
-              min="0" // Ensure no negative age
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-lg mb-2" htmlFor="childSchool">Child's School</label>
-            <input
-              type="text"
-              name="childSchool"
-              id="childSchool"
-              value={formData.childSchool}
-              onChange={handleInputChange}
-              className="w-full p-2 rounded border border-gray-300 text-black"
-              required
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-lg mb-2" htmlFor="childGrade">Child's Grade</label>
-            <select
-              name="childGrade"
-              id="childGrade"
-              value={formData.childGrade}
-              onChange={handleInputChange}
-              className="w-full p-2 rounded border border-gray-300 text-black"
-              required
-            >
-              <option value="">Select Option</option>
-              <option value="Primary 1">Primary 1</option>
-              <option value="Primary 2">Primary 2</option>
-              <option value="Primary 3">Primary 3</option>
-              <option value="Primary 4">Primary 4</option>
-              <option value="Primary 5">Primary 5</option>
-              <option value="Primary 6">Primary 6</option>
-            </select>
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="w-full">
+              <label className="block text-lg mb-2" htmlFor="childGrade">Child's Grade</label>
+              <select
+                name="childGrade"
+                id="childGrade"
+                value={formData.childGrade}
+                onChange={handleInputChange}
+                className="w-full p-2 rounded border border-gray-300 text-black"
+                required
+              >
+                <option value="">Select Option</option>
+                <option value="Primary 1">Primary 1</option>
+                <option value="Primary 2">Primary 2</option>
+                <option value="Primary 3">Primary 3</option>
+                <option value="Primary 4">Primary 4</option>
+                <option value="Primary 5">Primary 5</option>
+                <option value="Primary 6">Primary 6</option>
+              </select>
+            </div>
           </div>
 
           {/* Additional Information */}
-          <div className="mb-4 md:col-span-2">
+          <div className="w-full">
             <label className="block text-lg mb-2" htmlFor="additionalInfo">Additional Information</label>
             <textarea
               name="additionalInfo"
@@ -170,7 +177,7 @@ const RegistrationPage = () => {
             />
           </div>
 
-          <button type="submit" className="col-span-2 mt-6 bg-custom-blue text-white py-2 px-4 rounded hover:bg-blue-700 transition">
+          <button type="submit" className="w-full mt-6 bg-custom-blue text-white py-2 px-4 rounded hover:bg-blue-700 transition">
             Submit Registration
           </button>
         </form>

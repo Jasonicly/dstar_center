@@ -270,7 +270,7 @@ const AboutPage = () => {
     viewport={{ once: true }}
     transition={{ duration: 0.6 }}
   >
-    <h1 className="text-6xl font-extrabold text-custom-blue mb-6 text-center transition-transform duration-300 hover:scale-105">
+    <h1 className="text-6xl font-extrabold text-custom-blue mb-6 text-center transition-transform duration-300 hover:scale-105 break-words">
       Program and Activities
     </h1>
     <p className="text-xl text-gray-700 max-w-3xl mx-auto text-center">
