@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBus, FaSchool, FaShieldAlt, FaClipboardCheck, FaVideo, FaShower, FaAppleAlt, FaGamepad, FaBook, FaBell, FaPaintBrush, FaGlobe } from 'react-icons/fa'; // Icons for the features
+import { FaBus, FaSchool, FaShieldAlt, FaClipboardCheck, FaVideo, FaShower, FaAppleAlt, FaGamepad, FaBook, FaBell, FaPaintBrush } from 'react-icons/fa'; // Icons for the features
 
 function WhatMakesUsSpecial() {
   return (

@@ -18,7 +18,7 @@ const CenterLocation = () => {
 
         {/* Map Section */}
         <div className="w-full md:w-2/3" style={{ height: '500px' }}> {/* Set 2/3 width for the map */}
-          <iframe
+          <iframe title="Location map"
             src="https://storage.googleapis.com/maps-solutions-yqc7on83fu/locator-plus/le3v/locator-plus.html"
             width="100%"
             height="100%"

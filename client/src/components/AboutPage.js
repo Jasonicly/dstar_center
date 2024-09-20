@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion'; 
-import { FaBus, FaSchool, FaShieldAlt, FaClipboardCheck, FaVideo, FaShower, FaAppleAlt, FaGamepad, FaBook, FaBell, FaPaintBrush, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaTiktok, FaClock, FaCar } from 'react-icons/fa';
+import { FaBus, FaSchool, FaShieldAlt, FaClipboardCheck, FaVideo, FaShower, FaAppleAlt, FaGamepad, FaBook, FaBell, FaPaintBrush, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaTiktok, FaCar } from 'react-icons/fa';
 
 const AboutPage = () => {
     const animateOnScroll = {

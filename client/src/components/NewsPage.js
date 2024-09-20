@@ -33,7 +33,7 @@ const NewsPage = () => {
 
         {/* Instagram Widget */}
         <div className="w-full">
-          <iframe
+          <iframe title="Instagram Feed"
             src="https://cdn.lightwidget.com/widgets/0e1d6716a54650699cf8a6b6809e2747.html"
             scrolling="no"
             allowTransparency="true"
