@@ -6,6 +6,7 @@ function DevelopingFutureStars() {
   const imageRef = useRef();
 
   useEffect(() => {
+    const currentImageRef = imageRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -15,7 +16,7 @@ function DevelopingFutureStars() {
       }
     );
 
-    if (imageRef.current) {
+    if (currentImageRef) {
       observer.observe(imageRef.current);
     }
 

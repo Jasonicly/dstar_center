@@ -31,7 +31,7 @@ function HeroSection() {
       handleImageChange((currentImage + 1) % images.length);
     }, 15000);
     return () => clearInterval(interval);
-  }, [currentImage]);
+  }, [images.length]);
 
   const handleImageChange = (index) => {
     setIsTransitioning(true);
