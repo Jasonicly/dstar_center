@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 
 function HeroSection() {
   const images = [
@@ -70,12 +71,14 @@ function HeroSection() {
             {texts[currentImage].title}
           </h1>
           <p className="mt-4 text-lg">{texts[currentImage].subtitle}</p>
-          <a
-            href="registration"
+
+          {/* Replace <a> with <Link> */}
+          <Link
+            to="/registration"
             className="mt-6 inline-block bg-red-500 text-white py-3 px-6 rounded-full hover:bg-red-600 transition" // Adjusted padding for the button
           >
             Join Us Today
-          </a>
+          </Link>
         </div>
       </div>
 

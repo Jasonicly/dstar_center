@@ -152,17 +152,26 @@ function Navbar() {
             ))}
             {/* Adding Schedule a Tour and Register Here to the mobile menu */}
             <li>
-              <a href="/book-tour" className="text-gray-900 hover:text-custom-blue flex items-center transition-all duration-300">
-                <FaCalendarAlt className="mr-2" />
-                <span>Schedule a Tour</span>
-              </a>
-            </li>
-            <li>
-              <a href="/registration" className="text-gray-900 hover:text-custom-blue flex items-center transition-all duration-300">
-                <FaClipboardList className="mr-2" />
-                <span>Register Here</span>
-              </a>
-            </li>
+            <Link
+              to="/book-tour"
+              className="text-gray-900 hover:text-custom-blue flex items-center transition-all duration-300"
+              onClick={toggleMenu} // This will close the menu after clicking the link
+            >
+              <FaCalendarAlt className="mr-2" />
+              <span>Schedule a Tour</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/registration"
+              className="text-gray-900 hover:text-custom-blue flex items-center transition-all duration-300"
+              onClick={toggleMenu} // This will close the menu after clicking the link
+            >
+              <FaClipboardList className="mr-2" />
+              <span>Register Here</span>
+            </Link>
+          </li>
+
           </ul>
         </div>
       )}
