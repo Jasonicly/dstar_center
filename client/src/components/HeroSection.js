@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
+import { useSwipeable } from 'react-swipeable'; // Import the swipeable hook
 
 function HeroSection() {
   const images = [
@@ -26,13 +27,13 @@ function HeroSection() {
   const [currentImage, setCurrentImage] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // Cycle through the images and texts every 10 seconds
+  // Cycle through the images and texts every 15 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       handleImageChange((currentImage + 1) % images.length);
     }, 15000);
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [currentImage, images.length]);
 
   const handleImageChange = (index) => {
     setIsTransitioning(true);
@@ -42,8 +43,17 @@ function HeroSection() {
     }, 500);
   };
 
+  // Swipeable handlers
+  const handlers = useSwipeable({
+    onSwipedLeft: () => handleImageChange((currentImage + 1) % images.length),
+    onSwipedRight: () => handleImageChange((currentImage - 1 + images.length) % images.length),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true, // allows swipe with mouse as well
+  });
+
   return (
     <section
+      {...handlers} // Add swipe handlers to the section
       className="bg-cover bg-center h-screen flex items-center justify-center text-white relative overflow-hidden"
       style={{
         backgroundImage: `url(${images[currentImage]})`,

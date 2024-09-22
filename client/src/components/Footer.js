@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaTiktok } from 'react-icons/fa'; // Import icons from react-icons
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0); // Scroll to top of the page
+  };
+
   return (
     <footer className="bg-custom-palmhouse py-8">
       <div className="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -35,49 +39,49 @@ const Footer = () => {
           <div className="grid grid-cols-2 gap-4">
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-black hover:underline">
+                <Link to="/" className="text-black hover:underline" onClick={scrollToTop}>
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about-us" className="text-black hover:underline">
+                <Link to="/about-us" className="text-black hover:underline" onClick={scrollToTop}>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/programs" className="text-black hover:underline">
+                <Link to="/programs" className="text-black hover:underline" onClick={scrollToTop}>
                   Programs
                 </Link>
               </li>
               <li>
-                <Link to="/gallery" className="text-black hover:underline">
+                <Link to="/gallery" className="text-black hover:underline" onClick={scrollToTop}>
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link to="/registration" className="text-black hover:underline">
+                <Link to="/registration" className="text-black hover:underline" onClick={scrollToTop}>
                   Registration
                 </Link>
               </li>
             </ul>
             <ul className="space-y-2">
               <li>
-                <Link to="/join-us" className="text-black hover:underline">
+                <Link to="/join-us" className="text-black hover:underline" onClick={scrollToTop}>
                   Join Us
                 </Link>
               </li>
               <li>
-                <Link to="/book-tour" className="text-black hover:underline">
+                <Link to="/book-tour" className="text-black hover:underline" onClick={scrollToTop}>
                   Book a Tour
                 </Link>
               </li>
               <li>
-                <Link to="/fees" className="text-black hover:underline">
+                <Link to="/fees" className="text-black hover:underline" onClick={scrollToTop}>
                   Fees
                 </Link>
               </li>
               <li>
-                <Link to="/news" className="text-black hover:underline">
+                <Link to="/news" className="text-black hover:underline" onClick={scrollToTop}>
                   News
                 </Link>
               </li>
@@ -105,7 +109,6 @@ const Footer = () => {
             Monday to Friday: 7.00am – 7.00pm,
             <br />
             (Non-school days)
-
           </p>
 
           {/* Social Media Icons */}
