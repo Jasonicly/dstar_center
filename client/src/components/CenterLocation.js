@@ -21,7 +21,7 @@ const CenterLocation = () => {
             <div className="flex flex-col space-y-4 md:items-end items-center">
               <div className="flex items-center space-x-2 text-lg">
                 <FaPhoneAlt className="text-custom-blue" />
-                <span>(+65) 9743 6961</span>
+                <span>(+65) 6792 7050</span>
               </div>
               <div className="flex items-center space-x-2 text-lg">
                 <FaEnvelope className="text-custom-blue" />
