@@ -15,7 +15,7 @@ const NewsPage = () => {
     <div 
       className="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8"
       style={{ 
-        backgroundImage: `url(${process.env.PUBLIC_URL}/Background/Bluelightened.png)`, 
+        backgroundImage: `url(${process.env.PUBLIC_URL}/Background/Blue.png)`, 
         backgroundSize: '100%', // Adjust the percentage as needed
         backgroundPosition: 'center',
       }} // Add your custom background here

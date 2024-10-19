@@ -6,8 +6,9 @@ function ProgramsPage() {
     <section 
     className="min-h-screen bg-custom-pearl-gray flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-cover bg-center" 
     style={{ 
-        backgroundImage: `url(${process.env.PUBLIC_URL}/Background/Whitelightened.png)`, 
-        backgroundSize: '50%' // Adjust the percentage as needed
+        backgroundImage: `url(${process.env.PUBLIC_URL}/Background/Greylightened.png)`, 
+        backgroundSize: '100%', 
+        backgroundPosition: 'center',
     }}
     >
       <div className="max-w-screen-xl mx-auto px-4">

@@ -85,7 +85,7 @@ function DevelopingFutureStars() {
         <div className="w-full md:w-1/2 flex justify-center mb-12">
           <img
             ref={imageRef}
-            src={`${process.env.PUBLIC_URL}/Photos/Dstar_logo.png`}
+            src={`${process.env.PUBLIC_URL}/Photos/logo_sidebyside.png`}
             alt="Developing Future Stars"
             className={`pb-12 transition-opacity duration-2000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
             style={{ 

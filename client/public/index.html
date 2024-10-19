@@ -5,7 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    
+
     <!-- General Meta Tags -->
     <meta name="description" content="Welcome to Dstar EduCentre, the best place for child education and development." />
     <title>Dstar EduCentre</title>
@@ -13,19 +13,38 @@
     <!-- OpenGraph Meta Tags (Used by Facebook, WhatsApp, etc.) -->
     <meta property="og:title" content="Dstar EduCentre" />
     <meta property="og:description" content="Welcome to Dstar EduCentre, the best place for child education and development." />
-    <meta property="og:image" content="%PUBLIC_URL%/favicon.ico" />
+    <meta property="og:image" content="%PUBLIC_URL%/favicon-512x512.png" /> <!-- Use a higher resolution image -->
     <meta property="og:url" content="https://dstar.com.sg" />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:title" content="Dstar EduCentre" />
     <meta name="twitter:description" content="Welcome to Dstar EduCentre, the best place for child education and development." />
-    <meta name="twitter:image" content="%PUBLIC_URL%/favicon.ico" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/favicon-512x512.png" /> <!-- Use a higher resolution image -->
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Favicons for different platforms -->
+    <!-- Basic favicon for most browsers -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" type="image/x-icon" />
+    
+    <!-- Different sizes for different devices -->
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="%PUBLIC_URL%/favicon-48x48.png" />
+    
+    <!-- Apple Touch Icon (for iOS devices) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="%PUBLIC_URL%/android-chrome-512x512.png" />
+    
+    <!-- Microsoft Tiles (Windows) -->
+    <meta name="msapplication-TileImage" content="%PUBLIC_URL%/mstile-144x144.png" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+
+    <!-- Manifest for Progressive Web Apps -->
+    <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">

@@ -30,9 +30,9 @@ function Navbar() {
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4 relative">
           <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse z-0">
             <img 
-              src={`${process.env.PUBLIC_URL}/Photos/Dstar_logo.png`} 
+              src={`${process.env.PUBLIC_URL}/Photos/logo_horizontal.png`} 
               alt="Dstar Logo" 
-              className="ml-10 h-20 w-60 scale-125 sm:h-16 sm:w-48 md:h-20 md:w-60" 
+              className="ml-10 h-20 w-60 scale-125 sm:h-16 sm:w-48 md:h-15 md:w-80" 
             />
           </a>
           <div className="flex items-center space-x-4 rtl:space-x-reverse z-10">

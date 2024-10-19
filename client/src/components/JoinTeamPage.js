@@ -34,7 +34,7 @@ const JoinTeamPage = () => {
     <div 
       className="min-h-screen py-12 px-4 sm:px-6 lg:px-8"
       style={{ 
-        backgroundImage: `url(${process.env.PUBLIC_URL}/Background/Whitelightened.png)`, 
+        backgroundImage: `url(${process.env.PUBLIC_URL}/Background/White.png)`, 
         backgroundSize: '100%', 
         backgroundPosition: 'center',
       }}
