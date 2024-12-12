@@ -95,7 +95,7 @@ function DevelopingFutureStars() {
           />
         </div>
 
-        <div className="relative w-full md:w-1/2 ml-8">
+        <div className="relative w-full md:w-1/2 ml-8 transform scale-100 sm:scale-70">
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-10 transform -rotate-1 z-0"></div>
           <div className="relative bg-custom-beige p-6 shadow-lg transform rotate-2 z-10">
             <h1 className="text-5xl font-bold text-black mb-4 text-custom-blue break-words">
@@ -109,7 +109,7 @@ function DevelopingFutureStars() {
 
       {/* Sticky Notes Section */}
       <div className="relative pb-16 bg-custom-cloud">
-  <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+  <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12  scale-100 sm:scale-70">
     {overlayData.map((note, index) => (
       <div key={index} className="relative w-full flex justify-center cursor-pointer" onClick={() => openOverlay(index)}>
         

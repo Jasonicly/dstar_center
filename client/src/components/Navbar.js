@@ -32,10 +32,10 @@ function Navbar() {
             <img 
               src={`${process.env.PUBLIC_URL}/Photos/logo_horizontal.png`} 
               alt="Dstar Logo" 
-              className="ml-10 h-20 w-60 scale-125 sm:h-16 sm:w-48 md:h-15 md:w-80" 
+              className="py-2 ml-10 h-20 w-60 scale-125 sm:h-20 sm:w-48 md:h-15 md:w-80" 
             />
           </a>
-          <div className="flex items-center space-x-4 rtl:space-x-reverse z-10">
+          <div className="flex items-center space-x-4 rtl:space-x-reverse z-10 mt-2">
             <button onClick={toggleMenu} className="text-gray-900 focus:outline-none md:hidden">
               <svg
                 className="w-6 h-6"

@@ -14,9 +14,9 @@ const Footer = () => {
         {/* Logo and Contact Info */}
         <div className="flex flex-col space-y-4">
           <img
-            src={`${process.env.PUBLIC_URL}/Photos/Dstar_logo.png`}
+            src={`${process.env.PUBLIC_URL}/Photos/Logo_SidebySide.png`}
             alt="DStar Logo"
-            className="h-20 w-60"
+            className="h-30 w-60"
           />
           <div>
             <p className="text-lg font-semibold text-black">Contact Us:</p>
