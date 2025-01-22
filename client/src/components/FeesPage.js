@@ -12,7 +12,7 @@ const FeesPage = () => {
     <div 
       className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8" 
       style={{ 
-        backgroundImage: `url(${process.env.PUBLIC_URL}/Background/Blue.png)`, 
+        backgroundImage: `url(${process.env.PUBLIC_URL}/Background/Bluelightened.png)`, 
         backgroundSize: '100%', // Adjust the percentage as needed
         backgroundPosition: 'center' 
       }}

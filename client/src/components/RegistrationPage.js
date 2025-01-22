@@ -41,7 +41,7 @@ const RegistrationPage = () => {
     <div 
       className="min-h-screen bg-custom-pearl-gray flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-cover bg-center" 
       style={{ 
-        backgroundImage: `url(${process.env.PUBLIC_URL}/Background/White.png)`, 
+        backgroundImage: `url(${process.env.PUBLIC_URL}/Background/Whitelightened.png)`, 
         backgroundSize: '100%' 
       }}
     >

@@ -11,8 +11,8 @@ function HeroSection() {
 
   const texts = [
     {
-      subtitle: "2025 Student Care Registration",
-      title: "Get 50% off your fees for the first 6 months",
+      subtitle: "Enroll your child today",
+      title: "2025 Student Care Registration",
     },
     {
       title: "Welcome to DStar after school care",
