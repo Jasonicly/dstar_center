@@ -34,11 +34,18 @@ const AboutPage = () => {
         </div>
         </div>
         
-        {/* Philosophy Section (si gud shit)*/}
+        {/* Philosophy Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          <div className="flex items-center justify-center">
+          <motion.div
+            className="flex items-center justify-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            variants={animateOnScroll}
+          >
             <img src={`${process.env.PUBLIC_URL}/Photos/20240529_143444.jpg`} alt="Philosophy" className="rounded-lg shadow-lg w-full h-auto" />
-          </div>
+          </motion.div>
           <motion.div
             className="bg-custom-primrose p-10 rounded-lg shadow-md"
             initial="hidden"
@@ -51,7 +58,7 @@ const AboutPage = () => {
               Our Philosophy
             </h1>
             <p className="text-xl text-gray-800 max-w-xl mx-auto text-center">
-            At Dstar, we understand that each student is unique, with their own strengths, challenges, and interests. Our approach is tailored to meet the individual needs of each student, fostering a love for learning and encouraging personal development. We emphasize holistic care, which includes not only academic support but also emotional and social well-being. We strive to create an environment where students feel valued, motivated, and equipped to face new challenges.
+              At Dstar, we understand that each student is unique, with their own strengths, challenges, and interests. Our approach is tailored to meet the individual needs of each student, fostering a love for learning and encouraging personal development. We emphasize holistic care, which includes not only academic support but also emotional and social well-being. We strive to create an environment where students feel valued, motivated, and equipped to face new challenges.
             </p>
           </motion.div>
         </div>
@@ -70,24 +77,37 @@ const AboutPage = () => {
               About Our Company
             </h1>
             <p className="text-xl text-gray-700 max-w-xl mx-auto text-center">
-            Founded in 2013, Dstar has been a cornerstone of student support, blending history with a forward-thinking approach. Over the years, our Student Care Centre has earned a reputation for excellence in nurturing young minds and fostering growth. With dedicated service, Dstar has evolved to meet the changing needs of students and families. Our journey began with a vision to create a supportive environment where students could thrive beyond the classroom. From humble beginnings, we've grown into a respected centre known for academic excellence and holistic development.
+              Founded in 2013, Dstar has been a cornerstone of student support, blending history with a forward-thinking approach. Over the years, our Student Care Centre has earned a reputation for excellence in nurturing young minds and fostering growth. With dedicated service, Dstar has evolved to meet the changing needs of students and families. Our journey began with a vision to create a supportive environment where students could thrive beyond the classroom. From humble beginnings, we've grown into a respected centre known for academic excellence and holistic development.
             </p>
           </motion.div>
-          <div className="flex items-center justify-center">
+          <motion.div
+            className="flex items-center justify-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            variants={animateOnScroll}
+          >
             <img 
               src={`${process.env.PUBLIC_URL}/Photos/IMG-20240719-WA0043.jpg`} 
               alt="Company Profile" 
               className="rounded-lg shadow-lg w-full object-cover object-center" 
               style={{ height: '60vh' }} 
             />
-          </div>
+          </motion.div>
         </div>
-
         {/* Mission Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          <div className="flex items-center justify-center">
+          <motion.div
+            className="flex items-center justify-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            variants={animateOnScroll}
+          >
             <img src={`${process.env.PUBLIC_URL}/Photos/20240808_105834.jpg`} alt="Mission" className="rounded-lg shadow-lg w-full h-auto" />
-          </div>
+          </motion.div>
           <motion.div
             className="bg-custom-cloud p-10 rounded-lg shadow-md"
             initial="hidden"
@@ -100,11 +120,11 @@ const AboutPage = () => {
               Our Commitment
             </h1>
             <p className="text-xl text-gray-700 max-w-xl mx-auto text-center">
-            Our long history in education reflects our unwavering dedication to fostering a love of learning and helping students achieve their full potential. Over the decades, we have refined our programs and expanded our offerings, always with the goal of providing the best possible support to students. Our experienced team of educators brings a wealth of knowledge and a passion for teaching that has been honed over many years.
+              Our long history in education reflects our unwavering dedication to fostering a love of learning and helping students achieve their full potential. Over the decades, we have refined our programs and expanded our offerings, always with the goal of providing the best possible support to students. Our experienced team of educators brings a wealth of knowledge and a passion for teaching that has been honed over many years.
             </p>
           </motion.div>
         </div>
-
+      
         {/* Vision Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           <motion.div
@@ -116,23 +136,30 @@ const AboutPage = () => {
             variants={animateOnScroll}
           >
             <h1 className="text-5xl font-extrabold text-custom-blue mb-6 text-center transition-transform duration-300 hover:scale-105">
-            Legacy of Excellence
+              Legacy of Excellence
             </h1>
             <p className="text-xl text-gray-700 max-w-xl mx-auto text-center">
-            At Dstar, we take pride in our legacy and commitment to upholding high standards. Our center remains a trusted partner for families, offering personalized care and innovative programs that support both academic and emotional needs. Looking ahead, we stay dedicated to empowering students and guiding their success. We warmly invite your child to join our ongoing journey of educational excellence and growth.
-
+              At Dstar, we take pride in our legacy and commitment to upholding high standards. Our center remains a trusted partner for families, offering personalized care and innovative programs that support both academic and emotional needs. Looking ahead, we stay dedicated to empowering students and guiding their success. We warmly invite your child to join our ongoing journey of educational excellence and growth.
             </p>
           </motion.div>
-          <div className="flex items-center justify-center">
+          <motion.div
+            className="flex items-center justify-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            variants={animateOnScroll}
+          >
             <img 
               src={`${process.env.PUBLIC_URL}/Photos/IMG-20240719-WA0045.jpg`} 
               alt="Vision" 
               className="rounded-lg shadow-lg w-full object-cover object-center" 
               style={{ height: '65vh' }} 
             />
-          </div>
-        </div>
-        
+          </motion.div>
+        </div>        
+
+
 {/* Key Features Section */}
 <motion.div
           className="mb-16 bg-custom-pearl-gray p-10 rounded-lg shadow-md"
@@ -290,7 +317,7 @@ const AboutPage = () => {
             <div className="text-center flex flex-col items-center">
                 <FaPhoneAlt className="text-custom-blue text-5xl mb-4" /> {/* Icon above section */}
                 <h3 className="text-xl font-bold">Phone Number</h3>
-                <p className="text-lg text-gray-700">(+65) 6792 7050</p>
+                <p className="text-lg text-gray-700">(+65) 6792 0750</p>
             </div>
 
             {/* Email Section */}
