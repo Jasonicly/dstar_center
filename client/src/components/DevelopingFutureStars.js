@@ -87,55 +87,58 @@ function DevelopingFutureStars() {
             ref={imageRef}
             src={`${process.env.PUBLIC_URL}/Photos/logo_sidebyside.png`}
             alt="Developing Future Stars"
-            className={`pb-12 transition-opacity duration-2000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            className={`pt-12 transition-opacity duration-2000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
             style={{ 
               transition: 'opacity 1s ease-in-out',
               transform: 'rotate(-5deg)'
             }}
           />
         </div>
-
+        
+        {/* Title Card - No tilt/shadow on mobile */}
         <div className="relative w-full md:w-1/2 ml-8 transform scale-100 sm:scale-70">
-          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-10 transform -rotate-1 z-0"></div>
-          <div className="relative bg-custom-beige p-6 shadow-lg transform rotate-2 z-10">
+          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-10 transform -rotate-1 z-0 md:block hidden"></div>
+          <div className="relative bg-custom-beige p-6 shadow-lg transform md:rotate-2 z-10">
             <h1 className="text-5xl font-bold text-black mb-4 text-custom-blue break-words">
               Developing Future Stars
             </h1>
-            <p className="text-2xl text-gray-700 mb-4">Upon entering pre-school, usually children will bring with them a variety of personal and social skills, values, and attitudes. No matter how little these are, it is important that they foster these values and from the relationships and experiences within the home and immediate environment, we will help them to cultivate their learning environment.</p>
-            <p className="text-2xl text-gray-700 text-center font-bold"> We provide classes for:</p>
+            <p className="text-2xl text-gray-700 mb-4">
+              Children bring social skills, values, and attitudes. We help them foster these through relationships and experiences.
+            </p>
+            <p className="text-2xl text-gray-700 text-center font-bold">We provide classes for:</p>
           </div>
         </div>
       </div>
 
       {/* Sticky Notes Section */}
-      <div className="relative pb-16 bg-custom-cloud">
-  <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12  scale-100 sm:scale-70">
-    {overlayData.map((note, index) => (
-      <div key={index} className="relative w-full flex justify-center cursor-pointer" onClick={() => openOverlay(index)}>
-        
-        {/* Dynamic shadow, set to be relative to the sticky note */}
-        <div
-          className={`absolute top-2 w-10/12 h-full bg-black opacity-10 transform ${
-            index % 2 === 0 ? 'rotate-2' : '-rotate-2'
-          } rounded-md`}
-          style={{ marginRight: '5%', marginLeft: '5%' }} // Adjust the margin as needed for a dynamic effect
-        ></div>
-        
-        {/* Sticky note */}
-        <div
-          className={`relative w-full md:w-10/12 h-auto p-12 bg-custom-beige rounded-md shadow-2xl transform ${
-            index % 2 === 0 ? 'rotate-3' : '-rotate-3'
-          } hover:rotate-1 transition-all duration-500 text-center flex flex-col`}
-        >
-          <h1 className="text-5xl font-bold text-custom-misty-red break-words">{note.title}</h1>
-          <p className="mt-4 text-xl text-gray-700">{note.subtitle}.</p>
-          <div className="flex-grow"></div> {/* This div will take up the remaining space */}
-          <p className="mt-4 text-sm text-gray-700 italic">Click here to learn more</p>
+      <div className="relative pb-16 bg-custom-cloud px-4">
+        <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 scale-100 sm:scale-70">
+          {overlayData.map((note, index) => (
+            <div key={index} className="relative w-full flex justify-center cursor-pointer" onClick={() => openOverlay(index)}>
+              
+              {/* Dynamic shadow - Only on larger screens */}
+              <div
+                className={`absolute top-2 w-10/12 h-full bg-black opacity-10 transform ${
+                  index % 2 === 0 ? 'md:rotate-2' : 'md:-rotate-2'
+                } rounded-md md:block hidden`}
+                style={{ marginRight: '5%', marginLeft: '5%' }}
+              ></div>
+
+              {/* Sticky note */}
+              <div
+                className={`relative w-full md:w-10/12 h-auto p-12 bg-custom-beige rounded-md shadow-2xl transform ${
+                  index % 2 === 0 ? 'md:rotate-3' : 'md:-rotate-3'
+                } hover:rotate-1 transition-all duration-500 text-center flex flex-col`}
+              >
+                <h1 className="text-5xl font-bold text-custom-misty-red break-words">{note.title}</h1>
+                <p className="mt-4 text-xl text-gray-700">{note.subtitle}.</p>
+                <div className="flex-grow"></div>
+                <p className="mt-4 text-sm text-gray-700 italic">Click here to learn more</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    ))}
-  </div>
-</div>
 
 
       {/* Overlay */}
