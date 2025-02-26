@@ -52,7 +52,7 @@ function Navbar() {
                 ></path>
               </svg>
             </button>
-            <a href="tel:+6567920750" className="flex items-center text-sm text-gray-700 break-words">
+            <a href="tel:+6567927050" className="flex items-center text-sm text-gray-700 break-words">
               <FaPhoneAlt className="mr-2" /> 
               <span className="font-semibold break-words">(+65) 6792 0750</span>
             </a>
