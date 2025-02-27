@@ -37,7 +37,7 @@ function DevelopingFutureStars() {
     },
     {
       title: "Tuition Service",
-      subtitle: "  We offer tuition starting from Primary 1 and continuing through all grade levels.",
+      subtitle: "We offer tuition starting from Primary 1 to 6, and covering a wide range of subjects to ensure comprehensive academic support.",
       image: `${process.env.PUBLIC_URL}/Photos/IMG-20240719-WA0042.jpg`,
       description: "Our tuition service offers individualized attention for your child from Primary 1 onwards. Our experienced tutors, many of whom have worked in schools, provide personalized academic support in subjects ranging from mathematics to science and languages. We use a structured approach to ensure that your child receives the best guidance. Each session is customized based on your child's learning style, helping them grasp complex concepts with ease. Along with regular assessments and feedback, we ensure steady progress towards academic success."
     },
@@ -98,7 +98,7 @@ function DevelopingFutureStars() {
         {/* Title Card - No tilt/shadow on mobile */}
         <div className="relative w-full md:w-1/2 ml-8 transform scale-100 sm:scale-70">
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-10 transform -rotate-1 z-0 md:block hidden"></div>
-          <div className="relative bg-custom-beige p-6 shadow-lg transform md:rotate-2 z-10">
+          <div className="relative bg-custom-beige py-20 px-5 shadow-lg transform md:rotate-2 z-10 text-center">
             <h1 className="text-5xl font-bold text-black mb-4 text-custom-blue break-words">
               Developing Future Stars
             </h1>
@@ -108,7 +108,7 @@ function DevelopingFutureStars() {
             <p className="text-2xl text-gray-700 text-center font-bold">We provide classes for:</p>
           </div>
         </div>
-      </div>
+        </div>
 
       {/* Sticky Notes Section */}
       <div className="relative pb-16 bg-custom-cloud px-4">
@@ -131,7 +131,7 @@ function DevelopingFutureStars() {
                 } hover:rotate-1 transition-all duration-500 text-center flex flex-col`}
               >
                 <h1 className="text-5xl font-bold text-custom-misty-red break-words">{note.title}</h1>
-                <p className="mt-4 text-xl text-gray-700">{note.subtitle}.</p>
+                <p className="mt-4 text-xl text-gray-700">{note.subtitle} </p>
                 <div className="flex-grow"></div>
                 <p className="mt-4 text-sm text-gray-700 italic">Click here to learn more</p>
               </div>

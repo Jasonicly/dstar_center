@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com'; // Import EmailJS
 
 const BookTourPage = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     parentName: '',
     parentContact: '',
     parentEmail: '',
     preferredDate: '',
     preferredTime: '02:00 PM', // Default to PM
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [pastDateError, setPastDateError] = useState(false);
 
@@ -51,6 +52,7 @@ const BookTourPage = () => {
         .then((result) => {
           console.log('Email sent successfully:', result.text);
           setFormSubmitted(true); // Show the success message
+          setFormData(initialFormData); // Clear the form fields
         }, (error) => {
           console.error('Error sending email:', error.text);
         });

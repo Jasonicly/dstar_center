@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com'; // Import EmailJS
 
 const Registration = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     parentName: '',
     parentContact: '',
     parentEmail: '',
@@ -11,8 +11,9 @@ const Registration = () => {
     childSchool: '',
     childGrade: '',
     additionalInfo: ''
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [ageError, setAgeError] = useState(false); // Error state for age validation
 
@@ -41,6 +42,7 @@ const Registration = () => {
         .then((result) => {
           console.log('Email sent successfully:', result.text);
           setFormSubmitted(true); // Show the success message
+          setFormData(initialFormData); // Clear the form fields
         }, (error) => {
           console.error('Error sending email:', error.text);
         });

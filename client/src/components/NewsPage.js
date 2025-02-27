@@ -1,24 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const NewsPage = () => {
-  const [iframeHeight, setIframeHeight] = useState(1500); // Set the initial height of the iframe
-  const [loadMoreCount, setLoadMoreCount] = useState(0); // Track how many times the button is clicked
-  const maxLoadMoreClicks = 3; // Set a max limit of button clicks
+  const [iframeHeight, setIframeHeight] = useState(1500); // Initial iframe height
+  const maxIframeHeight = 6000; // Maximum height the iframe can reach
+  const scrollIncrease = 1000; // Amount to increase height on scroll
 
-  // Function to increase the iframe height by a fixed amount (e.g., 1000px)
-  const showMore = () => {
-    setIframeHeight((prevHeight) => prevHeight + 1000);
-    setLoadMoreCount((prevCount) => prevCount + 1);
+  // Function to increase iframe height when user scrolls near the bottom
+  const handleScroll = () => {
+    if (
+      window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 &&
+      iframeHeight < maxIframeHeight
+    ) {
+      setIframeHeight((prevHeight) => prevHeight + scrollIncrease);
+    }
   };
+
+  // Attach event listener on mount and remove on unmount
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [iframeHeight]);
 
   return (
     <div 
       className="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8"
       style={{ 
         backgroundImage: `url(${process.env.PUBLIC_URL}/Background/Bluelightened.png)`, 
-        backgroundSize: '100%', // Adjust the percentage as needed
+        backgroundSize: '100%',
         backgroundPosition: 'center',
-      }} // Add your custom background here
+      }}
     >
       <div className="max-w-screen-lg w-full bg-white shadow-lg rounded-lg p-8">
         <h1 
@@ -33,7 +43,8 @@ const NewsPage = () => {
 
         {/* Instagram Widget */}
         <div className="w-full">
-          <iframe title="Instagram Feed"
+          <iframe
+            title="Instagram Feed"
             src="https://cdn.lightwidget.com/widgets/0e1d6716a54650699cf8a6b6809e2747.html"
             scrolling="no"
             allowTransparency="true"
@@ -41,18 +52,6 @@ const NewsPage = () => {
             style={{ width: '100%', height: `${iframeHeight}px`, border: 0, overflow: 'hidden' }}
           ></iframe>
         </div>
-
-        {/* Show More Button */}
-        {loadMoreCount < maxLoadMoreClicks && (
-          <div className="text-center mt-8">
-            <button
-              onClick={showMore}
-              className="px-6 py-2 bg-custom-blue text-white rounded-lg shadow-lg hover:bg-custom-misty-red transition duration-300"
-            >
-              Show More
-            </button>
-          </div>
-        )}
       </div>
     </div>
   );

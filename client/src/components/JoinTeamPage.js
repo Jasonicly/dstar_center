@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com'; // For sending the application request
 
 const JoinTeamPage = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     name: '',
     phone: '',
     email: '',
     jobApplied: '',
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleInputChange = (e) => {
@@ -22,6 +24,7 @@ const JoinTeamPage = () => {
     emailjs.send('service_ecs8fst', 'template_hxsy408', formData, 'YevRGch7wUcJRkugR')
       .then(() => {
         setFormSubmitted(true);
+        setFormData(initialFormData); // Clear the form fields
       })
       .catch((error) => console.error('Email sending error:', error));
   };
@@ -137,8 +140,6 @@ const JoinTeamPage = () => {
           </button>
         </form>
       </div>
-
-
 
         {/* Success Popup */}
         {formSubmitted && (

@@ -317,7 +317,7 @@ const AboutPage = () => {
             <div className="text-center flex flex-col items-center">
                 <FaPhoneAlt className="text-custom-blue text-5xl mb-4" /> {/* Icon above section */}
                 <h3 className="text-xl font-bold">Phone Number</h3>
-                <p className="text-lg text-gray-700">(+65) 6792 0750</p>
+                <p className="text-lg text-gray-700">(+65) 6792 7050</p>
             </div>
 
             {/* Email Section */}

@@ -54,7 +54,7 @@ function Navbar() {
             </button>
             <a href="tel:+6567927050" className="flex items-center text-sm text-gray-700 break-words">
               <FaPhoneAlt className="mr-2" /> 
-              <span className="font-semibold break-words">(+65) 6792 0750</span>
+              <span className="font-semibold break-words">(+65) 6792 7050</span>
             </a>
             <a href="mailto:dstar.jw@gmail.com" className="flex items-center text-sm text-gray-700 break-words">
               <FaEnvelope className="mr-2" />
@@ -106,7 +106,7 @@ function Navbar() {
         <ul className="flex flex-col items-start mt-8 space-y-4 p-4 text-black">
           <li className="flex items-center">
             <FaPhoneAlt className="mr-2" />
-            <a href="tel:+6567920750" className="text-gray-900">(+65) 6792 0750</a>
+            <a href="tel:+6567927050" className="text-gray-900">(+65) 6792 7050</a>
           </li>
           <li className="flex items-center">
             <FaEnvelope className="mr-2" />

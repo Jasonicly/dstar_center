@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com'; // Import EmailJS
 
 const RegistrationPage = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     parentName: '',
     parentContact: '',
     parentEmail: '',
@@ -11,8 +11,9 @@ const RegistrationPage = () => {
     childSchool: '',
     childGrade: '',
     additionalInfo: ''
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleInputChange = (e) => {
@@ -28,6 +29,7 @@ const RegistrationPage = () => {
       .then((result) => {
         console.log('Email sent successfully:', result.text);
         setFormSubmitted(true); // Show the success message
+        setFormData(initialFormData); // Clear the form fields
       }, (error) => {
         console.error('Error sending email:', error.text);
       });

@@ -21,7 +21,7 @@ const Footer = () => {
           <div>
             <p className="text-lg font-semibold text-black">Contact Us:</p>
             <a href="tel:+6597436961" className="text-black hover:underline">
-              (+65) 6792 0750
+              (+65) 6792 7050
             </a>
             <br />
             <a href="mailto:dstar.jw@gmail.com" className="text-black hover:underline">
@@ -131,7 +131,7 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <div className="text-center text-black text-sm">
-        &copy; 2024 DStar Education Centre. All rights reserved.
+        &copy; 2025 DStar Education Centre. All rights reserved.
       </div>
     </footer>
   );

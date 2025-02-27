@@ -28,8 +28,8 @@ const Qualifications = () => {
         </div>
 
         {/* Scroll Track for Qualifications */}
-        <div className="w-full md:w-2/3 overflow-x-auto">
-          <div className="flex space-x-4">
+        <div className="w-full md:w-2/3 overflow-x-auto overflow-y-hidden">
+          <div className="flex space-x-4 flex-nowrap">
             {qualificationsData.map((qualification, index) => (
               <div
                 key={index}
@@ -38,9 +38,9 @@ const Qualifications = () => {
                 <img
                   src={qualification.imageUrl}
                   alt={qualification.title}
-                  className="w-full h-40 object-contain p-4" 
+                  className="w-full h-40 object-contain p-4"
                 />
-                <div className="p-4">
+                <div className="p-4 whitespace-nowrap">
                   <h3 className="text-xl font-semibold mb-2 text-custom-palmhouse">
                     {qualification.title}
                   </h3>
@@ -55,5 +55,4 @@ const Qualifications = () => {
     </section>
   );
 };
-
 export default Qualifications;
