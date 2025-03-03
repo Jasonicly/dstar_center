@@ -111,7 +111,7 @@ const FeesPage = () => {
         {/* Invitation to Visit Section */}
         <div className="mb-8">
           <p className="text-gray-700 text-lg">
-            We welcome you to visit our centre for a firsthand experience of the warm and enriching environment we offer. Please feel free to contact us at <span className="font-bold">(+65) 6792 0750</span> or <span className="font-bold">dstar.jw@gmail.com</span> to schedule a tour or seek further information.
+            We welcome you to visit our centre for a firsthand experience of the warm and enriching environment we offer. Please feel free to contact us at <span className="font-bold">(+65) 6792 7050</span> or <span className="font-bold">dstar.jw@gmail.com</span> to schedule a tour or seek further information.
           </p>
         </div>
 
