@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com'; // Import EmailJS
+import PromoPopup from './PromoPopup';
+
 
 const RegistrationPage = () => {
   const initialFormData = {
@@ -47,6 +49,7 @@ const handleSubmit = (e) => {
         backgroundSize: '100%' 
       }}
     >
+      <PromoPopup alwaysShow={true} />
       <div className="max-w-3xl w-full bg-white shadow-lg rounded-lg p-8 border border-custom-blue relative">
         <div className="mb-8 text-center">
           <h1 className="text-5xl font-bold text-custom-blue">Register Your Child</h1>

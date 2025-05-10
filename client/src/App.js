@@ -12,11 +12,13 @@ import News from './pages/News';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
+import PromoPopup from './components/PromoPopup'; // Import the PromoPopup component
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <PromoPopup />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />

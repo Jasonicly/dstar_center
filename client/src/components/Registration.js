@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com'; // Import EmailJS
+import PromoPopup from './PromoPopup';
 
 const Registration = () => {
   const initialFormData = {
@@ -55,6 +56,8 @@ const Registration = () => {
   };
 
   return (
+    <div>
+    <PromoPopup alwaysShow={true} />
     <section 
       className="py-16 bg-cover bg-center" 
       style={{ 
@@ -63,7 +66,6 @@ const Registration = () => {
       }}
     >
       <div className="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-start">
-        
         {/* Title and Intro Text on the Left Side */}
         <div className="w-full md:w-1/4 pr-8">
           <h2 className="text-4xl font-bold mb-4">Register Your Child</h2>
@@ -205,6 +207,7 @@ const Registration = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 }
 

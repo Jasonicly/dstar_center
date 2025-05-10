@@ -4,9 +4,9 @@ import { useSwipeable } from 'react-swipeable'; // Import the swipeable hook
 
 function HeroSection() {
   const images = [
-    `${process.env.PUBLIC_URL}/Photos/20240808_105834.jpg`,
+    `${process.env.PUBLIC_URL}/Photos/main1.jpg`,
     `${process.env.PUBLIC_URL}/Photos/IMG-20240719-WA0042.jpg`,
-    `${process.env.PUBLIC_URL}/Photos/IMG-20240521-WA0021.jpg`,
+    `${process.env.PUBLIC_URL}/Photos/main3.jpg`,
   ];
 
   const texts = [
@@ -67,7 +67,7 @@ function HeroSection() {
         <div
           className={`transform transition-all duration-500 ${
             isTransitioning ? "opacity-0 -translate-x-full" : "opacity-100 translate-x-0"
-          } p-20 shadow-lg bg-custom-blue text-center max-w-2xl`} // Increased padding and max width
+          } p-20 shadow-lg bg-violet-300 text-center max-w-2xl`} // Increased padding and max width
           style={{
             clipPath: "url(#blob)", // Blob shape using SVG clipPath
           }}

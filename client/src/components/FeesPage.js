@@ -28,11 +28,11 @@ const FeesPage = () => {
             <tbody>
               <tr className="border-b">
                 <td className="py-2 font-semibold">Monthly Fee:</td>
-                <td>$330</td>
+                <td>$350</td>
               </tr>
               <tr className="border-b">
                 <td className="py-2 font-semibold">Registration Fee:</td>
-                <td>$35 (one-time)</td>
+                <td>$30 (one-time)</td>
               </tr>
               <tr className="border-b">
                 <td className="py-2 font-semibold">Annual Material Fee:</td>
@@ -40,11 +40,11 @@ const FeesPage = () => {
               </tr>
               <tr className="border-b">
                 <td className="py-2 font-semibold">Annual Insurance Premium:</td>
-                <td>$10 (payable every January)</td>
+                <td>$24 (payable every January)</td>
               </tr>
               <tr className="border-b">
                 <td className="py-2 font-semibold">Deposit:</td>
-                <td>$330 (non-refundable and non-transferable, used to offset against the student care fee for the last month)</td>
+                <td>One Month (non-refundable and non-transferable, used to offset against the student care fee for the last month)</td>
               </tr>
             </tbody>
           </table>

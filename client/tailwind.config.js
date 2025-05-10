@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         'custom-pearl-gray': '#f8f6ee',
         'custom-blue': '#6f77e8',
+        'custom-lightblue': '#a3b4f7',
         'custom-misty-red': '#b05b4b',
         'custom-palmhouse': '#91bfa2',
         'custom-primrose': '#fef6b3',
