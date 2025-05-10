@@ -35,7 +35,7 @@ const Registration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     if (!ageError) {
       // Send the form data via EmailJS
       emailjs.send('service_ecs8fst', 'template_8qey02e', formData, 'YevRGch7wUcJRkugR')
@@ -43,7 +43,8 @@ const Registration = () => {
           console.log('Email sent successfully:', result.text);
           setFormSubmitted(true); // Show the success message
           setFormData(initialFormData); // Clear the form fields
-        }, (error) => {
+        })
+        .catch((error) => {
           console.error('Error sending email:', error.text);
         });
     }

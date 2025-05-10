@@ -19,14 +19,17 @@ const JoinTeamPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Send the form data via EmailJS (you can set this up as per your own configuration)
+  
+    // Send the form data via EmailJS
     emailjs.send('service_ecs8fst', 'template_hxsy408', formData, 'YevRGch7wUcJRkugR')
-      .then(() => {
-        setFormSubmitted(true);
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        setFormSubmitted(true); // Show the success message
         setFormData(initialFormData); // Clear the form fields
       })
-      .catch((error) => console.error('Email sending error:', error));
+      .catch((error) => {
+        console.error('Error sending email:', error.text);
+      });
   };
 
   const closePopup = () => {

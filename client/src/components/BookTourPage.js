@@ -48,16 +48,17 @@ const BookTourPage = () => {
       };
 
       // Send the form data via EmailJS
-      emailjs.send('service_ecs8fst', 'template_hxsy408', finalFormData, 'YevRGch7wUcJRkugR')
-        .then((result) => {
-          console.log('Email sent successfully:', result.text);
-          setFormSubmitted(true); // Show the success message
-          setFormData(initialFormData); // Clear the form fields
-        }, (error) => {
-          console.error('Error sending email:', error.text);
-        });
-    }
-  };
+      emailjs.send('service_ecs8fst', 'template_hxsy408', formData, 'YevRGch7wUcJRkugR')
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        setFormSubmitted(true); // Show the success message
+        setFormData(initialFormData); // Clear the form fields
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error.text);
+      });
+  }
+};
 
   const closePopup = () => {
     setFormSubmitted(false);
