@@ -48,11 +48,8 @@ const PromoPopup = ({ alwaysShow }) => {
 
           {/* Offer Text */}
           <h2 className="text-2xl md:text-3xl font-extrabold text-custom-misty-red mb-3">
-            50% OFF for 2026 Applicants!
+            50% OFF for 2026 Intake!
           </h2>
-          <p className="text-gray-700 text-sm md:text-md mb-4 leading-relaxed">
-            <strong>Special Promotion for 2026 Intakes!</strong>
-          </p>
           <p className="text-gray-700 text-sm md:text-md mb-4 leading-relaxed">
             Enroll early and enjoy <strong>50% off for the first 6 months</strong> — available only to the first 30 enrollments.
           </p>
