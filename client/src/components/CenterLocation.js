@@ -12,7 +12,7 @@ const CenterLocation = () => {
             Conveniently located in the neighbourhood, <br />our centre is easily accessible to families.
           </p>
           <p className="mt-4 text-lg text-gray-700">
-            <strong>Address:</strong> <strong>Blk 729 Jurong West Avenue 5,<br />#B1-214, Singapore 640729</strong>
+            <strong>Address:</strong> <strong>729 Jurong West Avenue 5, <br />#B1-214, Singapore 640729</strong>
           </p>
 
           {/* Contact Information */}

@@ -96,7 +96,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4 text-black">Our Location</h3>
           <p className="text-black mb-4">
-            Blk 729 Jurong West Avenue 5, #B1-214,<br />Singapore 640729
+          729 Jurong West Avenue 5, #B1-214,<br />Singapore 640729
           </p>
 
           {/* Opening Hours */}

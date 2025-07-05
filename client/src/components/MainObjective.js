@@ -23,7 +23,7 @@ const MainObjective = () => {
             <h2 className="text-red-500 text-sm uppercase mb-2 break-words">Welcome to DStar</h2>
             <h1 className="text-6xl font-bold mb-4 text-orange-600 break-words">OUR MAIN OBJECTIVE</h1>
             <p className="text-lg text-gray-700 mb-4 break-words">
-              At Dstar, our mission is to nurture the next generation of leaders and innovators. We provide comprehensive support, including high-quality after school programs, hands-on activities, and personalized mentorship. We focus on building resilience, adaptability, and real-world experience to help young individuals develop personally and professionally. Through teamwork, networking, and a growth mindset, we equip them with essential resources to reach their full potential. By recognizing and celebrating achievements, we inspire and motivate them toward greatness, shaping a brighter future for tomorrow’s achievers.
+              At DStar EduCentre, our mission is to nurture the next generation of leaders and innovators. We provide comprehensive support, including high-quality after school programs, hands-on activities, and personalized mentorship. We focus on building resilience, adaptability, and real-world experience to help young individuals develop personally and professionally. Through teamwork, networking, and a growth mindset, we equip them with essential resources to reach their full potential. By recognizing and celebrating achievements, we inspire and motivate them toward greatness, shaping a brighter future for tomorrow’s achievers.
             </p>
             <p className="text-lg text-gray-700 italic break-words">
               "Children must be taught how to think, not what to think." — Margaret Mead

@@ -35,7 +35,7 @@ function ProgramsPage() {
           <div className="order-last md:order-first">
             <h2 className="text-4xl font-bold text-custom-misty-red mb-4">After School Care</h2>
             <p className="text-lg text-gray-700">
-              At DStar, we are committed to nurturing the next generation of leaders and innovators through our carefully designed after-school care program. Our mission is to create a supportive, stimulating environment that enhances your child’s growth beyond the classroom. We offer:
+              At DStar EduCentre, we are committed to nurturing the next generation of leaders and innovators through our carefully designed after-school care program. Our mission is to create a supportive, stimulating environment that enhances your child’s growth beyond the classroom. We offer:
             </p>
 
             <ul className="list-disc list-inside text-lg text-gray-700 my-4">
@@ -67,7 +67,7 @@ function ProgramsPage() {
           <div>
             <h2 className="text-4xl font-bold text-custom-blue mb-4">Tuition Service</h2>
             <p className="text-lg text-gray-700">
-              At DStar, we provide dedicated tuition services starting from Primary 1 and continuing through all grade levels. Our approach focuses on small group tuition to ensure personalized attention and effective learning. By keeping our class sizes small, we allow our experienced tutors to give each student the support they need to excel academically.
+              At DStar EduCentre, we provide dedicated tuition services starting from Primary 1 and continuing through all grade levels. Our approach focuses on small group tuition to ensure personalized attention and effective learning. By keeping our class sizes small, we allow our experienced tutors to give each student the support they need to excel academically.
             </p>
 
             <ul className="list-disc list-inside text-lg text-gray-700 my-4">

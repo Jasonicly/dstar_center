@@ -54,7 +54,7 @@ function GalleryPage() {
     <section
       className="relative bg-cover bg-center py-16"
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/Background/Yellow.png)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/Background/LightYellowlightened.png)`,
         backgroundSize: '100%' // Adjust the percentage as needed
       }}
     >

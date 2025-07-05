@@ -58,7 +58,7 @@ const AboutPage = () => {
               Our Philosophy
             </h1>
             <p className="text-xl text-gray-800 max-w-xl mx-auto text-center">
-              At Dstar, we understand that each student is unique, with their own strengths, challenges, and interests. Our approach is tailored to meet the individual needs of each student, fostering a love for learning and encouraging personal development. We emphasize holistic care, which includes not only academic support but also emotional and social well-being. We strive to create an environment where students feel valued, motivated, and equipped to face new challenges.
+              At DStar EduCentre, we understand that each student is unique, with their own strengths, challenges, and interests. Our approach is tailored to meet the individual needs of each student, fostering a love for learning and encouraging personal development. We emphasize holistic care, which includes not only academic support but also emotional and social well-being. We strive to create an environment where students feel valued, motivated, and equipped to face new challenges.
             </p>
           </motion.div>
         </div>
@@ -77,7 +77,7 @@ const AboutPage = () => {
               About Our Company
             </h1>
             <p className="text-xl text-gray-700 max-w-xl mx-auto text-center">
-              Founded in 2013, Dstar has been a cornerstone of student support, blending history with a forward-thinking approach. Over the years, our Student Care Centre has earned a reputation for excellence in nurturing young minds and fostering growth. With dedicated service, Dstar has evolved to meet the changing needs of students and families. Our journey began with a vision to create a supportive environment where students could thrive beyond the classroom. From humble beginnings, we've grown into a respected centre known for academic excellence and holistic development.
+              Founded in 2013, DStar EduCentre has been a cornerstone of student support, blending history with a forward-thinking approach. Over the years, our Student Care Centre has earned a reputation for excellence in nurturing young minds and fostering growth. With dedicated service, Dstar has evolved to meet the changing needs of students and families. Our journey began with a vision to create a supportive environment where students could thrive beyond the classroom. From humble beginnings, we've grown into a respected centre known for academic excellence and holistic development.
             </p>
           </motion.div>
           <motion.div
@@ -139,7 +139,7 @@ const AboutPage = () => {
               Legacy of Excellence
             </h1>
             <p className="text-xl text-gray-700 max-w-xl mx-auto text-center">
-              At Dstar, we take pride in our legacy and commitment to upholding high standards. Our center remains a trusted partner for families, offering personalized care and innovative programs that support both academic and emotional needs. Looking ahead, we stay dedicated to empowering students and guiding their success. We warmly invite your child to join our ongoing journey of educational excellence and growth.
+              At DStar EduCentre, we take pride in our legacy and commitment to upholding high standards. Our center remains a trusted partner for families, offering personalized care and innovative programs that support both academic and emotional needs. Looking ahead, we stay dedicated to empowering students and guiding their success. We warmly invite your child to join our ongoing journey of educational excellence and growth.
             </p>
           </motion.div>
           <motion.div
@@ -331,7 +331,7 @@ const AboutPage = () => {
             <div className="text-center flex flex-col items-center">
             <FaMapMarkerAlt className="text-custom-blue text-5xl mb-4" /> {/* Icon above section */}
             <h3 className="text-xl font-bold">Location</h3>
-            <p className="text-lg text-gray-700">Blk 729 Jurong West Avenue 5, #B1-214, Singapore 640729</p>
+            <p className="text-lg text-gray-700">729 Jurong West Avenue 5, #B1-214, Singapore 640729</p>
             </div>
 
         </div>
