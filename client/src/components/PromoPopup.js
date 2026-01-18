@@ -1,26 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-const PromoPopup = ({ alwaysShow }) => {
-  const [showPopup, setShowPopup] = useState(false);
-
-  useEffect(() => {
-    if (alwaysShow) {
-      // Always show the popup if the `alwaysShow` prop is true
-      setShowPopup(true);
-    } else {
-      const hasVisited = sessionStorage.getItem('hasVisited'); // Use sessionStorage
-      if (!hasVisited) {
-        setTimeout(() => setShowPopup(true), 800); // Show popup after 800ms
-        sessionStorage.setItem('hasVisited', 'true'); // Mark as visited for this session
-      }
-    }
-  }, [alwaysShow]);
+const PromoPopup = () => {
+  // Popup is disabled, so `showPopup` is always false
+  const showPopup = false;
 
   const handleClose = () => {
-    setShowPopup(false); // Close the popup
+    // No action needed since the popup is disabled
   };
 
-  if (!showPopup) return null; // Do not render the popup if it's not supposed to show
+  if (!showPopup) return null; // Do not render the popup
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-30 backdrop-blur-sm">
